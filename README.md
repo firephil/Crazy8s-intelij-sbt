@@ -49,3 +49,19 @@ non-whitespace, printable ASCII characters.
 
 [Scala]: http://www.scala-lang.org/
 [TIO-jfjhl5fc]: https://tio.run/##dZBNS8QwEIbv/RVzERK6hK7rxyJEUE@CXvQoHtJ2uo2dTUqalULpb69Nq3aFNZeZMM@TeUmTKVKD3tfWeWjCRWSWCDOvrRH7g1cpoXjSjb8/FAW66A968JrEizK53UdRZNOP0YNnpQ1g69HkDdzVdRcBDAA5FuCYunk0fgVpKFyGEcCnckCSbTbgLVxc8zhml9vQr8@v@ESQnJeIphxTEDLiv2Yrl3Rvr95ps3tny7iSydQzFV5MufA28KKwDlVWdihv5xTT0QWrpCRBaHa@5N2PDf@k6I9VYHi2lTLhXRtLYlXY9VAqN5Y51wIDVLFcH9lIDQYNT8LfeD8LbT9@Zz0ynjm2TlabhPOoH74A "Scala – Try It Online"
+
+## Improved Functional style code
+# [Scala], 202 bytes
+
+<!-- language-all: lang-scala -->
+
+      def S(a: Int, b: Int)={
+        val c=(33 to 47)++(58 to 126)
+        val r = (a to b).toStream.map {case x if x % 8 == 0=>c(Random.nextInt(c.length)).toChar.toString
+          case x => String.valueOf(x)}
+        r}
+
+[Try it online!][TIO-jfjnkfpe]
+
+[Scala]: http://www.scala-lang.org/
+[TIO-jfjnkfpe]: https://tio.run/##VVBdS8MwFH3PrzgvQsJG6Ky6IWSgPgmK4H5BmqZbJE1Kmkph9LfXpBXBl/t57jn33l5JK2fTdj5E9DnhylurVTTe8XaIsrKav5k@Pg9NowP5Bx2isfxTutq3hBBffaU5vEvjoMeoXd3jqeuuBJiBWjc4UfmIVxe3qBbPRG4C39JCCVqWiB53e7bZ0PtDjne3D@wPESBAZS5XjEd/ikHLlreyw1XJXmOEaZK5wQFCoBBHRdfduEvrJDmquNXuHC8sz79cZFhpjDsvIsAvjzhiLfOkO@iPho5sWiBhSqd0qRXpie6KbVlkqvwfRqb5Bw "Scala – Try It Online"
