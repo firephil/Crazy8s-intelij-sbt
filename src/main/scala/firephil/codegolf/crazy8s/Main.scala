@@ -5,7 +5,7 @@ import org.openjdk.jmh.annotations.Benchmark
 import org.openjdk.jmh.annotations.BenchmarkMode
 import org.openjdk.jmh.annotations.Mode
 import org.openjdk.jmh.annotations.OutputTimeUnit
-//import pl.project13.scala.sbt.JmhPlugin
+import pl.project13.scala.sbt.JmhPlugin
 
 import java.util.concurrent.TimeUnit
 
@@ -14,7 +14,6 @@ import scala.util.Random
 
 
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
-@BenchmarkMode(Array(Mode.Throughput))
 class Main {
 
   @Benchmark
