@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/firephil/Crazy8s.svg?branch=master)](https://travis-ci.org/firephil/Crazy8s)
+[![Build Status](https://travis-ci.org/firephil/Crazy8s-intelij-sbt.svg?branch=master)](https://travis-ci.org/firephil/Crazy8s-intelij-sbt)
 
 ## Crazy 8s Code Golf Challenge
 
