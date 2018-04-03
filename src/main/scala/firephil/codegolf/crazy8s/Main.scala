@@ -60,6 +60,6 @@ object Main extends App {
       case x => String.valueOf(x)}
     r}
 
-
-  println(S(10,20).toList)
+  def st(a:Int, b:Int) = S(a,b).par
+  println(st(10,20).toList)
 }
