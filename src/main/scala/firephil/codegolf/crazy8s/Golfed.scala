@@ -5,7 +5,15 @@ import scala.util.Random
 
 class Golfed {
 
-  //golfed versions
+
+  def S(a: Int, b: Int)={
+    val c=(33 to 47)++(58 to 126)
+    val r = (a to b).toStream.map {case x if x % 8 == 0=>c(Random.nextInt(c.length)).toChar.toString
+    case x => String.valueOf(x)}
+    r}
+
+
+  //golfed versions   naive bad code for reference
   def r(a:Int, b:Int)={
     var l=(33 to 47)++(58 to 126)
     l=Random.shuffle(l)
@@ -19,10 +27,5 @@ class Golfed {
       else{x+=e.toString
         k+=1}}}
     x}
-  def S(a: Int, b: Int)={
-    val c=(33 to 47)++(58 to 126)
-    val r = (a to b).toStream.map {case x if x % 8 == 0=>c(Random.nextInt(c.length)).toChar.toString
-    case x => String.valueOf(x)}
-    r}
 
 }
