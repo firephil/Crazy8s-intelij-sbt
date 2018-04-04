@@ -8,13 +8,15 @@ import pl.project13.scala.sbt.JmhPlugin
 */
 
 import java.util.concurrent.TimeUnit
+
+import scala.collection.parallel.immutable.ParSeq
 import scala.util.Random
 
 //@OutputTimeUnit(TimeUnit.MILLISECONDS)
-class Main {
+object Main {
 
   //@Benchmark
-  def randomize8Stream(a: Int, b: Int) = {
+  def randomize8Stream(a: Int, b: Int): Stream[String] = {
     val chars = (33 to 47) ++ (58 to 126)
 
     var stream :Stream[String] = (a to b).toStream.map {
@@ -25,7 +27,7 @@ class Main {
   }
 
   //@Benchmark
-  def randomize8ParStream(a:Int, b:Int) = randomize8Stream(a,b).par
+  def randomize8ParStream(a:Int, b:Int): ParSeq[String] = randomize8Stream(a,b).par
 
   def main(args: Array[String]): Unit = {
     println(randomize8ParStream(10,20).toList)
