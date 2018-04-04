@@ -30,6 +30,6 @@ object Main {
   def randomize8ParStream(a:Int, b:Int): ParSeq[String] = randomize8Stream(a,b).par
 
   def main(args: Array[String]): Unit = {
-    println(randomize8ParStream(10,20).toList)
+    println(randomize8ParStream(10,30).toList)
   }
 }
